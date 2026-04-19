@@ -1,0 +1,95 @@
+
+
+---
+
+## **📋 Scheda d’uso – 6 Prompt strategici per AI**
+
+### **1\. Framework Prompt Universale**
+
+| Specifica | Dettaglio |
+| :---- | :---- |
+| A cosa serve | Dare all’AI una struttura rigida (ruolo, task, contesto, formato, avvertenze, valutazione, iterazione) per ottenere risposte oggettive, verificabili e migliorabili. |
+| Tipo di IA | ChatGPT, Claude, Gemini, Copilot, qualsiasi LLM testuale. |
+| Lunghezza risposta tipica | Variabile (da 500 a 2000 parole) in base al compito. |
+| Flusso operativo | 1\. Copia l’intero prompt (incluse le istruzioni fino a “Ora, dimmi il tuo compito”). 2\. Incollalo all’inizio della chat. 3\. Sostituisci `[descrivi qui...]` con la tua richiesta concreta (mantieni la frase “Ora, ecco il mio compito da svolgere:”). 4\. L’AI risponderà seguendo la struttura (ruolo, task, contesto...). 5\. Se vuoi iterare, chiedi esplicitamente “migliora la risposta applicando un ciclo di revisione”. |
+| Errori comuni | ❌ Dimenticare di sostituire `[descrivi qui...]` → l’AI ti chiederà il compito. ❌ Chiedere più task in una volta → l’AI li eseguirà comunque, ma meglio separarli. |
+| Verifica funzionamento | La risposta deve contenere sezioni come “Ruolo”, “Task”, “Contesto”, “Formato”. Se mancano, il prompt non è stato copiato correttamente. |
+
+---
+
+### **2\. Agente Autonomo & Cooperativo**
+
+| Specifica | Dettaglio |
+| :---- | :---- |
+| A cosa serve | Per Microsoft Copilot (o AI che supporta multi-agente). L’AI esegue compiti in autonomia e, se presenti altri agenti idonei nello stesso workspace, può delegare loro sotto-compiti. |
+| Tipo di IA | Microsoft Copilot (con modalità “Agente”), oppure qualsiasi AI con API di tool calling. Su ChatGPT standard funziona solo la parte autonoma (non la delega). |
+| Lunghezza risposta tipica | Media (300-1000 parole) più azioni/esecuzioni. |
+| Flusso operativo | 1\. Incolla il prompt in Copilot. 2\. Specifica l’obiettivo e, se presenti, elenca gli altri agenti con nome e competenze. 3\. L’AI deciderà se agire da sola o delegare. 4\. Per la delega, deve esplicitamente dire “Delego a \[nome agente\] il sotto-task X”. 5\. Alla fine, riepiloga le azioni compiute. |
+| Errori comuni | ❌ Dichiarare agenti che non esistono → l’AI proverà a delegare comunque ma fallirà. Meglio non menzionarli se non presenti. ❌ Non specificare il formato finale → l’AI userà markdown di default. |
+| Verifica funzionamento | La risposta deve includere una sezione “Esecuzione autonoma” o “Delega effettuata”. Se dice “Non ci sono altri agenti, eseguo da solo”, funziona correttamente. |
+
+---
+
+### **3\. Game Design Analyzer**
+
+| Specifica | Dettaglio |
+| :---- | :---- |
+| A cosa serve | Analizzare e sviluppare idee per giochi (video game, board game, etc.) seguendo una pipeline in 4 fasi: Discovery (domande chiarificatrici), Strategia, Allineamento, Azione (documento finale). |
+| Tipo di IA | ChatGPT, Claude, Gemini (preferibilmente con finestra di contesto lunga). |
+| Lunghezza risposta tipica | Fase 1: breve (10 domande). Fasi 2-4: da 1000 a 3000 parole. |
+| Flusso operativo | 1\. Copia e incolla il prompt. 2\. Sostituisci `[INSERIRE IDEA/CONTESTO]` con la tua idea di gioco. 3\. Aggiungi “Inizia dalla Fase 1.” 4\. Rispondi alle domande della Fase 1\. 5\. L’AI procederà automaticamente alla Fase 2, poi 3, poi 4\. |
+| Errori comuni | ❌ Non rispondere a tutte le domande della Fase 1 → l’AI resta in attesa. ❌ Chiedere di saltare una fase → il framework si rompe. |
+| Verifica funzionamento | La risposta deve iniziare con “Fase 1: Discovery” e contenere domande chiare. Alla fine della Fase 4, deve produrre un documento con executive summary, roadmap, rischi. |
+
+---
+
+### **4\. Problem Solver a 4 Fasi**
+
+| Specifica | Dettaglio |
+| :---- | :---- |
+| A cosa serve | Affrontare qualsiasi problema complesso (business, personale, organizzativo) senza ricevere risposte affrettate. L’AI è costretta a: 1\) chiedere chiarimenti, 2\) proporre un approccio, 3\) rivederlo con te, 4\) fornire un piano d’azione dettagliato. |
+| Tipo di IA | Qualsiasi LLM (ChatGPT, Claude, Gemini, Copilot). |
+| Lunghezza risposta tipica | Fase 1: breve (domande). Fase 2: 200-500 parole. Fase 3: 100-300 parole. Fase 4: 500-1500 parole. |
+| Flusso operativo | 1\. Incolla il prompt. 2\. Descrivi il problema (anche in modo generico). 3\. L’AI risponderà con “Fase 1: Chiarimenti” facendoti domande. 4\. Rispondi punto per punto. 5\. L’AI passerà automaticamente alla Fase 2, poi aspetterà tuo via libera per Fase 3, ecc. |
+| Errori comuni | ❌ Dare troppe informazioni subito → l’AI salta alcune domande ma funziona comunque. ❌ Non dare il consenso esplicito (“procedi alla Fase 3”) – alcune AI restano in attesa. |
+| Verifica funzionamento | La risposta deve menzionare esplicitamente “Fase 1”, “Fase 2”, ecc. Se l’AI dà subito una soluzione senza domande, il prompt non è stato applicato. |
+
+---
+
+### **5\. AI Prompt Enhancer (6 Parti \+ 5 Hack)**
+
+| Specifica | Dettaglio |
+| :---- | :---- |
+| A cosa serve | Trasforma qualsiasi IA in un esperto di prompt engineering che applica automaticamente 5 tecniche avanzate: rilevatore di verità, assistente per la creazione di prompt, loop di automiglioramento, 4 parole magiche (“pensa passo dopo passo”) e priming. |
+| Tipo di IA | ChatGPT, Claude, Gemini, Copilot (tutti funzionano). Per il rilevatore di verità, meglio modelli recenti. |
+| Lunghezza risposta tipica | Variabile, ma ogni risposta includerà livelli di sicurezza e ragionamento passo-passo. |
+| Flusso operativo | 1\. Copia l’intero prompt dalla prima riga `Agisci come un esperto...` fino a `Ora, dimmi il tuo compito.` 2\. Incollalo all’inizio della chat. 3\. Scrivi il tuo compito specifico (senza sostituire nulla, basta scrivere dopo). 4\. L’AI applicherà automaticamente: \- Rilevatore di verità (ogni affermazione avrà % di sicurezza) \- Assistente prompt (se chiedi “creami un prompt per...”) \- Loop di auto-miglioramento (per bozze creative, farà 3 round) \- 4 parole magiche (inizierà con “Pensa passo dopo passo”) \- Priming (per argomenti tecnici, farà una domanda ampia prima). |
+| Errori comuni | ❌ Chiedere un compito troppo vago (es. “aiutami”) → l’AI applicherà le tecniche ma potrebbe chiedere dettagli. ❌ Non volere il rilevatore di verità → non può essere disattivato, è obbligatorio. |
+| Verifica funzionamento | La risposta deve contenere almeno una percentuale di sicurezza (es. “95%+”) oppure la frase “Pensa passo dopo passo”. Se mancano, il prompt non è stato copiato integralmente. |
+
+---
+
+### **6\. Action Framework (5 Step per Marketing & Strategia)**
+
+| Specifica | Dettaglio |
+| :---- | :---- |
+| A cosa serve | Struttura qualsiasi richiesta complessa (piani di marketing, analisi, ottimizzazioni) in 5 passi obbligatori: Obiettivo, Ruolo, Contesto, Azione (una sola alla volta), Formato di consegna. Impedisce risposte generiche. |
+| Tipo di IA | ChatGPT, Claude, Gemini, Copilot. |
+| Lunghezza risposta tipica | 500-2000 parole, dipende dall’azione richiesta. |
+| Flusso operativo | 1\. Copia il prompt (da `Agisci come un assistente AI specializzato...` fino a `Se manca qualcosa, chiedimelo prima di rispondere.`). 2\. Incollalo nella chat. 3\. Non devi fare altro: il prompt stesso ti chiederà di fornire obiettivo, ruolo, contesto, azione e formato. Puoi fornirli in un unico messaggio o rispondere alle sue domande una per una. 4\. L’IA produrrà una risposta aderente al framework, con un’azione laser focus e formato specifico. |
+| Errori comuni | ❌ Fornire più azioni in una volta → l’AI eseguirà solo la prima o ti chiederà di separarle. ❌ Omettere il formato di consegna → l’AI userà markdown con sezioni. |
+| Verifica funzionamento | La risposta deve essere chiaramente divisa in sezioni corrispondenti ai 5 step (Obiettivo, Ruolo, Contesto, Azione, Formato). Se l’AI inizia con “Certo, ecco il tuo piano…”, ma senza struttura, il prompt non è stato applicato. |
+
+---
+
+## **✅ Tabella riassuntiva rapida**
+
+| Nome prompt | Tipo IA | Tempo medio risposta | Azione chiave |
+| :---- | :---- | :---- | :---- |
+| Framework Universale | Tutte | 10-30 sec | Sostituire `[descrivi qui...]` |
+| Agente Autonomo | Copilot | 5-20 sec | Dichiarare altri agenti se presenti |
+| Game Design Analyzer | Tutte | 30-60 sec (Fase 1\) | Rispondere alle domande |
+| Problem Solver 4 Fasi | Tutte | 20-40 sec per fase | Dare consenso a ogni fase |
+| AI Prompt Enhancer | Tutte | 15-40 sec | Scrivere il compito dopo il prompt |
+| Action Framework | Tutte | 20-50 sec | Fornire obiettivo, ruolo, contesto, azione, formato |
+
