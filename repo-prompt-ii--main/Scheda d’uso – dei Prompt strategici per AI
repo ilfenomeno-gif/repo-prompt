@@ -1,152 +1,141 @@
-
+Ecco il testo riorganizzato e pulito, con una struttura uniforme, tabelle ben formattate e una chiara separazione tra le due sezioni di prompt.
 
 ---
 
-## **📋 Scheda d’uso – 6 Prompt strategici per AI**
+# 📚 Schedario Completo di Prompt Strategici per AI
 
-### **1\. Framework Prompt Universale**
+## Parte 1 – 6 Prompt Strategici Generali
+
+### 1. Framework Prompt Universale
 
 | Specifica | Dettaglio |
-| :---- | :---- |
-| A cosa serve | Dare all’AI una struttura rigida (ruolo, task, contesto, formato, avvertenze, valutazione, iterazione) per ottenere risposte oggettive, verificabili e migliorabili. |
-| Tipo di IA | ChatGPT, Claude, Gemini, Copilot, qualsiasi LLM testuale. |
-| Lunghezza risposta tipica | Variabile (da 500 a 2000 parole) in base al compito. |
-| Flusso operativo | 1\. Copia l’intero prompt (incluse le istruzioni fino a “Ora, dimmi il tuo compito”). 2\. Incollalo all’inizio della chat. 3\. Sostituisci `[descrivi qui...]` con la tua richiesta concreta (mantieni la frase “Ora, ecco il mio compito da svolgere:”). 4\. L’AI risponderà seguendo la struttura (ruolo, task, contesto...). 5\. Se vuoi iterare, chiedi esplicitamente “migliora la risposta applicando un ciclo di revisione”. |
-| Errori comuni | ❌ Dimenticare di sostituire `[descrivi qui...]` → l’AI ti chiederà il compito. ❌ Chiedere più task in una volta → l’AI li eseguirà comunque, ma meglio separarli. |
-| Verifica funzionamento | La risposta deve contenere sezioni come “Ruolo”, “Task”, “Contesto”, “Formato”. Se mancano, il prompt non è stato copiato correttamente. |
+| --- | --- |
+| **A cosa serve** | Dare all’AI una struttura rigida (ruolo, task, contesto, formato, avvertenze, valutazione, iterazione) per ottenere risposte oggettive, verificabili e migliorabili. |
+| **Tipo di IA** | ChatGPT, Claude, Gemini, Copilot, qualsiasi LLM testuale. |
+| **Lunghezza risposta tipica** | Variabile (da 500 a 2000 parole) in base al compito. |
+| **Flusso operativo** | 1. Copia l’intero prompt (incluse le istruzioni fino a “Ora, dimmi il tuo compito”).<br>2. Incollalo all’inizio della chat.<br>3. Sostituisci `[descrivi qui...]` con la tua richiesta concreta (mantieni la frase “Ora, ecco il mio compito da svolgere:”).<br>4. L’AI risponderà seguendo la struttura (ruolo, task, contesto…).<br>5. Per iterare, chiedi esplicitamente “migliora la risposta applicando un ciclo di revisione”. |
+| **Errori comuni** | ❌ Dimenticare di sostituire `[descrivi qui...]` → l’AI chiederà il compito.<br>❌ Chiedere più task in una volta → l’AI li eseguirà comunque, ma meglio separarli. |
+| **Verifica funzionamento** | La risposta deve contenere sezioni come “Ruolo”, “Task”, “Contesto”, “Formato”. Se mancano, il prompt non è stato copiato correttamente. |
 
----
-
-### **2\. Agente Autonomo & Cooperativo**
+### 2. Agente Autonomo & Cooperativo
 
 | Specifica | Dettaglio |
-| :---- | :---- |
-| A cosa serve | Per Microsoft Copilot (o AI che supporta multi-agente). L’AI esegue compiti in autonomia e, se presenti altri agenti idonei nello stesso workspace, può delegare loro sotto-compiti. |
-| Tipo di IA | Microsoft Copilot (con modalità “Agente”), oppure qualsiasi AI con API di tool calling. Su ChatGPT standard funziona solo la parte autonoma (non la delega). |
-| Lunghezza risposta tipica | Media (300-1000 parole) più azioni/esecuzioni. |
-| Flusso operativo | 1\. Incolla il prompt in Copilot. 2\. Specifica l’obiettivo e, se presenti, elenca gli altri agenti con nome e competenze. 3\. L’AI deciderà se agire da sola o delegare. 4\. Per la delega, deve esplicitamente dire “Delego a \[nome agente\] il sotto-task X”. 5\. Alla fine, riepiloga le azioni compiute. |
-| Errori comuni | ❌ Dichiarare agenti che non esistono → l’AI proverà a delegare comunque ma fallirà. Meglio non menzionarli se non presenti. ❌ Non specificare il formato finale → l’AI userà markdown di default. |
-| Verifica funzionamento | La risposta deve includere una sezione “Esecuzione autonoma” o “Delega effettuata”. Se dice “Non ci sono altri agenti, eseguo da solo”, funziona correttamente. |
+| --- | --- |
+| **A cosa serve** | Per Microsoft Copilot (o AI con supporto multi‑agente). L’AI esegue compiti in autonomia e, se presenti altri agenti idonei nello stesso workspace, può delegare loro sotto‑compiti. |
+| **Tipo di IA** | Microsoft Copilot (con modalità “Agente”), oppure qualsiasi AI con API di tool calling. Su ChatGPT standard funziona solo la parte autonoma (non la delega). |
+| **Lunghezza risposta tipica** | Media (300‑1000 parole) più azioni/esecuzioni. |
+| **Flusso operativo** | 1. Incolla il prompt in Copilot.<br>2. Specifica l’obiettivo e, se presenti, elenca gli altri agenti con nome e competenze.<br>3. L’AI deciderà se agire da sola o delegare.<br>4. Per la delega, deve esplicitamente dire “Delego a [nome agente] il sotto‑task X”.<br>5. Alla fine, riepiloga le azioni compiute. |
+| **Errori comuni** | ❌ Dichiarare agenti che non esistono → l’AI proverà a delegare ma fallirà. Meglio non menzionarli se non presenti.<br>❌ Non specificare il formato finale → l’AI userà markdown di default. |
+| **Verifica funzionamento** | La risposta deve includere una sezione “Esecuzione autonoma” o “Delega effettuata”. Se dice “Non ci sono altri agenti, eseguo da solo”, funziona correttamente. |
 
----
-
-### **3\. Game Design Analyzer**
+### 3. Game Design Analyzer
 
 | Specifica | Dettaglio |
-| :---- | :---- |
-| A cosa serve | Analizzare e sviluppare idee per giochi (video game, board game, etc.) seguendo una pipeline in 4 fasi: Discovery (domande chiarificatrici), Strategia, Allineamento, Azione (documento finale). |
-| Tipo di IA | ChatGPT, Claude, Gemini (preferibilmente con finestra di contesto lunga). |
-| Lunghezza risposta tipica | Fase 1: breve (10 domande). Fasi 2-4: da 1000 a 3000 parole. |
-| Flusso operativo | 1\. Copia e incolla il prompt. 2\. Sostituisci `[INSERIRE IDEA/CONTESTO]` con la tua idea di gioco. 3\. Aggiungi “Inizia dalla Fase 1.” 4\. Rispondi alle domande della Fase 1\. 5\. L’AI procederà automaticamente alla Fase 2, poi 3, poi 4\. |
-| Errori comuni | ❌ Non rispondere a tutte le domande della Fase 1 → l’AI resta in attesa. ❌ Chiedere di saltare una fase → il framework si rompe. |
-| Verifica funzionamento | La risposta deve iniziare con “Fase 1: Discovery” e contenere domande chiare. Alla fine della Fase 4, deve produrre un documento con executive summary, roadmap, rischi. |
+| --- | --- |
+| **A cosa serve** | Analizzare e sviluppare idee per giochi (videogiochi, giochi da tavolo, ecc.) seguendo una pipeline in 4 fasi: Discovery (domande chiarificatrici), Strategia, Allineamento, Azione (documento finale). |
+| **Tipo di IA** | ChatGPT, Claude, Gemini (preferibilmente con finestra di contesto lunga). |
+| **Lunghezza risposta tipica** | Fase 1: breve (10 domande). Fasi 2‑4: da 1000 a 3000 parole. |
+| **Flusso operativo** | 1. Copia e incolla il prompt.<br>2. Sostituisci `[INSERIRE IDEA/CONTESTO]` con la tua idea di gioco.<br>3. Aggiungi “Inizia dalla Fase 1.”<br>4. Rispondi alle domande della Fase 1.<br>5. L’AI procederà automaticamente alla Fase 2, poi 3, poi 4. |
+| **Errori comuni** | ❌ Non rispondere a tutte le domande della Fase 1 → l’AI resta in attesa.<br>❌ Chiedere di saltare una fase → il framework si rompe. |
+| **Verifica funzionamento** | La risposta deve iniziare con “Fase 1: Discovery” e contenere domande chiare. Alla fine della Fase 4, deve produrre un documento con executive summary, roadmap, rischi. |
 
----
-
-### **4\. Problem Solver a 4 Fasi**
+### 4. Problem Solver a 4 Fasi
 
 | Specifica | Dettaglio |
-| :---- | :---- |
-| A cosa serve | Affrontare qualsiasi problema complesso (business, personale, organizzativo) senza ricevere risposte affrettate. L’AI è costretta a: 1\) chiedere chiarimenti, 2\) proporre un approccio, 3\) rivederlo con te, 4\) fornire un piano d’azione dettagliato. |
-| Tipo di IA | Qualsiasi LLM (ChatGPT, Claude, Gemini, Copilot). |
-| Lunghezza risposta tipica | Fase 1: breve (domande). Fase 2: 200-500 parole. Fase 3: 100-300 parole. Fase 4: 500-1500 parole. |
-| Flusso operativo | 1\. Incolla il prompt. 2\. Descrivi il problema (anche in modo generico). 3\. L’AI risponderà con “Fase 1: Chiarimenti” facendoti domande. 4\. Rispondi punto per punto. 5\. L’AI passerà automaticamente alla Fase 2, poi aspetterà tuo via libera per Fase 3, ecc. |
-| Errori comuni | ❌ Dare troppe informazioni subito → l’AI salta alcune domande ma funziona comunque. ❌ Non dare il consenso esplicito (“procedi alla Fase 3”) – alcune AI restano in attesa. |
-| Verifica funzionamento | La risposta deve menzionare esplicitamente “Fase 1”, “Fase 2”, ecc. Se l’AI dà subito una soluzione senza domande, il prompt non è stato applicato. |
+| --- | --- |
+| **A cosa serve** | Affrontare qualsiasi problema complesso (business, personale, organizzativo) senza ricevere risposte affrettate. L’AI è costretta a: 1) chiedere chiarimenti, 2) proporre un approccio, 3) rivederlo con te, 4) fornire un piano d’azione dettagliato. |
+| **Tipo di IA** | Qualsiasi LLM (ChatGPT, Claude, Gemini, Copilot). |
+| **Lunghezza risposta tipica** | Fase 1: breve (domande). Fase 2: 200‑500 parole. Fase 3: 100‑300 parole. Fase 4: 500‑1500 parole. |
+| **Flusso operativo** | 1. Incolla il prompt.<br>2. Descrivi il problema (anche in modo generico).<br>3. L’AI risponderà con “Fase 1: Chiarimenti” facendoti domande.<br>4. Rispondi punto per punto.<br>5. L’AI passerà automaticamente alla Fase 2, poi aspetterà il tuo via libera per la Fase 3, ecc. |
+| **Errori comuni** | ❌ Dare troppe informazioni subito → l’AI salta alcune domande ma funziona comunque.<br>❌ Non dare il consenso esplicito (“procedi alla Fase 3”) – alcune AI restano in attesa. |
+| **Verifica funzionamento** | La risposta deve menzionare esplicitamente “Fase 1”, “Fase 2”, ecc. Se l’AI dà subito una soluzione senza domande, il prompt non è stato applicato. |
 
----
-
-### **5\. AI Prompt Enhancer (6 Parti \+ 5 Hack)**
+### 5. AI Prompt Enhancer (6 Parti + 5 Hack)
 
 | Specifica | Dettaglio |
-| :---- | :---- |
-| A cosa serve | Trasforma qualsiasi IA in un esperto di prompt engineering che applica automaticamente 5 tecniche avanzate: rilevatore di verità, assistente per la creazione di prompt, loop di automiglioramento, 4 parole magiche (“pensa passo dopo passo”) e priming. |
-| Tipo di IA | ChatGPT, Claude, Gemini, Copilot (tutti funzionano). Per il rilevatore di verità, meglio modelli recenti. |
-| Lunghezza risposta tipica | Variabile, ma ogni risposta includerà livelli di sicurezza e ragionamento passo-passo. |
-| Flusso operativo | 1\. Copia l’intero prompt dalla prima riga `Agisci come un esperto...` fino a `Ora, dimmi il tuo compito.` 2\. Incollalo all’inizio della chat. 3\. Scrivi il tuo compito specifico (senza sostituire nulla, basta scrivere dopo). 4\. L’AI applicherà automaticamente: \- Rilevatore di verità (ogni affermazione avrà % di sicurezza) \- Assistente prompt (se chiedi “creami un prompt per...”) \- Loop di auto-miglioramento (per bozze creative, farà 3 round) \- 4 parole magiche (inizierà con “Pensa passo dopo passo”) \- Priming (per argomenti tecnici, farà una domanda ampia prima). |
-| Errori comuni | ❌ Chiedere un compito troppo vago (es. “aiutami”) → l’AI applicherà le tecniche ma potrebbe chiedere dettagli. ❌ Non volere il rilevatore di verità → non può essere disattivato, è obbligatorio. |
-| Verifica funzionamento | La risposta deve contenere almeno una percentuale di sicurezza (es. “95%+”) oppure la frase “Pensa passo dopo passo”. Se mancano, il prompt non è stato copiato integralmente. |
+| --- | --- |
+| **A cosa serve** | Trasforma qualsiasi IA in un esperto di prompt engineering che applica automaticamente 5 tecniche avanzate: rilevatore di verità, assistente per la creazione di prompt, loop di auto‑miglioramento, 4 parole magiche (“pensa passo dopo passo”) e priming. |
+| **Tipo di IA** | ChatGPT, Claude, Gemini, Copilot (tutti funzionano). Per il rilevatore di verità, meglio modelli recenti. |
+| **Lunghezza risposta tipica** | Variabile, ma ogni risposta includerà livelli di sicurezza e ragionamento passo‑passo. |
+| **Flusso operativo** | 1. Copia l’intero prompt dalla prima riga `Agisci come un esperto...` fino a `Ora, dimmi il tuo compito.`<br>2. Incollalo all’inizio della chat.<br>3. Scrivi il tuo compito specifico (senza sostituire nulla, basta scrivere dopo).<br>4. L’AI applicherà automaticamente: rilevatore di verità (% di sicurezza), assistente prompt, loop di auto‑miglioramento (3 round per bozze creative), “pensa passo dopo passo”, priming. |
+| **Errori comuni** | ❌ Chiedere un compito troppo vago (es. “aiutami”) → l’AI applicherà le tecniche ma potrebbe chiedere dettagli.<br>❌ Non volere il rilevatore di verità → non può essere disattivato, è obbligatorio. |
+| **Verifica funzionamento** | La risposta deve contenere almeno una percentuale di sicurezza (es. “95%+”) oppure la frase “Pensa passo dopo passo”. Se mancano, il prompt non è stato copiato integralmente. |
 
----
-
-### **6\. Action Framework (5 Step per Marketing & Strategia)**
+### 6. Action Framework (5 Step per Marketing & Strategia)
 
 | Specifica | Dettaglio |
-| :---- | :---- |
-| A cosa serve | Struttura qualsiasi richiesta complessa (piani di marketing, analisi, ottimizzazioni) in 5 passi obbligatori: Obiettivo, Ruolo, Contesto, Azione (una sola alla volta), Formato di consegna. Impedisce risposte generiche. |
-| Tipo di IA | ChatGPT, Claude, Gemini, Copilot. |
-| Lunghezza risposta tipica | 500-2000 parole, dipende dall’azione richiesta. |
-| Flusso operativo | 1\. Copia il prompt (da `Agisci come un assistente AI specializzato...` fino a `Se manca qualcosa, chiedimelo prima di rispondere.`). 2\. Incollalo nella chat. 3\. Non devi fare altro: il prompt stesso ti chiederà di fornire obiettivo, ruolo, contesto, azione e formato. Puoi fornirli in un unico messaggio o rispondere alle sue domande una per una. 4\. L’IA produrrà una risposta aderente al framework, con un’azione laser focus e formato specifico. |
-| Errori comuni | ❌ Fornire più azioni in una volta → l’AI eseguirà solo la prima o ti chiederà di separarle. ❌ Omettere il formato di consegna → l’AI userà markdown con sezioni. |
-| Verifica funzionamento | La risposta deve essere chiaramente divisa in sezioni corrispondenti ai 5 step (Obiettivo, Ruolo, Contesto, Azione, Formato). Se l’AI inizia con “Certo, ecco il tuo piano…”, ma senza struttura, il prompt non è stato applicato. |
+| --- | --- |
+| **A cosa serve** | Struttura qualsiasi richiesta complessa (piani di marketing, analisi, ottimizzazioni) in 5 passi obbligatori: Obiettivo, Ruolo, Contesto, Azione (una sola alla volta), Formato di consegna. Impedisce risposte generiche. |
+| **Tipo di IA** | ChatGPT, Claude, Gemini, Copilot. |
+| **Lunghezza risposta tipica** | 500‑2000 parole, dipende dall’azione richiesta. |
+| **Flusso operativo** | 1. Copia il prompt (da `Agisci come un assistente AI specializzato...` fino a `Se manca qualcosa, chiedimelo prima di rispondere.`).<br>2. Incollalo nella chat.<br>3. Il prompt stesso ti chiederà di fornire obiettivo, ruolo, contesto, azione e formato. Puoi fornirli in un unico messaggio o rispondere alle domande una per una.<br>4. L’AI produrrà una risposta aderente al framework, con un’azione laser focus e formato specifico. |
+| **Errori comuni** | ❌ Fornire più azioni in una volta → l’AI eseguirà solo la prima o ti chiederà di separarle.<br>❌ Omettere il formato di consegna → l’AI userà markdown con sezioni. |
+| **Verifica funzionamento** | La risposta deve essere chiaramente divisa in sezioni corrispondenti ai 5 step (Obiettivo, Ruolo, Contesto, Azione, Formato). Se l’AI inizia con “Certo, ecco il tuo piano…” senza struttura, il prompt non è stato applicato. |
 
 ---
 
-## **✅ Tabella riassuntiva rapida**
+### ✅ Tabella Riassuntiva – Parte 1
 
-| Nome prompt | Tipo IA | Tempo medio risposta | Azione chiave |
-| :---- | :---- | :---- | :---- |
-| Framework Universale | Tutte | 10-30 sec | Sostituire `[descrivi qui...]` |
-| Agente Autonomo | Copilot | 5-20 sec | Dichiarare altri agenti se presenti |
-| Game Design Analyzer | Tutte | 30-60 sec (Fase 1\) | Rispondere alle domande |
-| Problem Solver 4 Fasi | Tutte | 20-40 sec per fase | Dare consenso a ogni fase |
-| AI Prompt Enhancer | Tutte | 15-40 sec | Scrivere il compito dopo il prompt |
-| Action Framework | Tutte | 20-50 sec | Fornire obiettivo, ruolo, contesto, azione, formato |
-📋 Scheda 1 – DeepReasoner
-(ragionamento approfondito, struttura XML, autovalutazione con KPI interni)
+| Nome Prompt | Tipo IA | Tempo medio risposta | Azione chiave |
+| --- | --- | --- | --- |
+| Framework Universale | Tutte | 10‑30 sec | Sostituire `[descrivi qui...]` |
+| Agente Autonomo | Copilot | 5‑20 sec | Dichiarare altri agenti se presenti |
+| Game Design Analyzer | Tutte | 30‑60 sec (Fase 1) | Rispondere alle domande |
+| Problem Solver 4 Fasi | Tutte | 20‑40 sec per fase | Dare consenso a ogni fase |
+| AI Prompt Enhancer | Tutte | 15‑40 sec | Scrivere il compito dopo il prompt |
+| Action Framework | Tutte | 20‑50 sec | Fornire obiettivo, ruolo, contesto, azione, formato |
 
-Specifica	Dettaglio
-A cosa serve	Costringe l’AI a ragionare a lungo, autovalutarsi internamente con criteri (KPI) e fornire risposte strutturate in XML (analisi, dettagli, raccomandazioni). Ideale per problemi complessi, analisi strategiche, coding, pianificazione.
-Tipo di IA	ChatGPT (GPT-4o, GPT-5), Claude, Gemini, qualsiasi LLM con buona capacità di seguire istruzioni articolate.
-Lunghezza risposta tipica	3-5 paragrafi (modificabile agendo sul tag <VERBOSITA>). In formato XML, da 300 a 800 parole circa.
-Flusso operativo	1. Copia l’intero prompt (dal tag [RUOLO] fino a “Ora rispondi alla richiesta dell’utente”).
-2. Incollalo all’inizio della chat.
-3. Scrivi la tua domanda o task subito dopo (anche nello stesso messaggio).
-4. L’AI esegue internamente: power phrase → definisce KPI → valuta bozza → perfeziona → produce output con tag <analisi>, <dettagli>, <raccomandazioni>.
-5. Se vuoi modificare la lunghezza, cambia il testo in <VERBOSITA> (es. “risposta molto breve, 100 parole”).
-Errori comuni	❌ Dimenticare di incollare il prompt prima della domanda → l’AI risponde in modo standard.
-❌ Chiedere compiti multipli in una volta → l’AI li gestisce ma la struttura XML può diventare confusa.
-❌ Usare su modelli molto vecchi (es. GPT-3.5) → l’autovalutazione interna potrebbe essere inefficace.
-Verifica funzionamento	La risposta deve contenere almeno due dei tre tag XML (<analisi>, <dettagli>, <raccomandazioni>). Se l’output è un normale blocco di testo senza marcatori, il prompt non è stato applicato.
-📋 Scheda 2 – AI Fundamentals Coach
-(padroneggiare i 5 fondamentali dell’IA nel 2026)
+---
 
-Specifica	Dettaglio
-A cosa serve	Insegna all’utente i cinque fondamentali per usare l’IA in modo efficace: sviluppo prompt con COSTAR, scelta dei 4 tipi di strumenti (cervello, ricerca, specialista, automazione), agenti AI, integrazione di dati personali, vibe coding. Non promuove tool specifici ma principi generali.
-Tipo di IA	Qualsiasi LLM testuale (ChatGPT, Claude, Gemini, Copilot). Ideale per chat di formazione o consulenza.
-Lunghezza risposta tipica	Variabile (da 200 a 1500 parole) a seconda della domanda dell’utente. Di solito strutturata in elenchi o sezioni.
-Flusso operativo	1. Incolla l’intero prompt (da [RUOLO] a “Ora attendi la richiesta dell’utente”).
-2. Scrivi una domanda su uno dei fondamentali (es. “Aiutami a scrivere un prompt per un reel” oppure “Quale strumento usare per automatizzare?”).
-3. L’AI risponde applicando la regola corrispondente (COSTAR, classificazione strumenti, spiegazione agenti, dati, vibe coding).
-4. Se la domanda è generica, l’AI chiederà dettagli (es. “Qual è il tuo obiettivo misurabile?”).
-Errori comuni	❌ Chiedere “dammi tutti i fondamentali in una volta” → l’AI li elenca ma in modo meno approfondito.
-❌ Fornire un compito troppo vago (“parlami dell’IA”) → l’AI risponderà in modo generale, meglio essere specifici.
-❌ Chiedere un nome di tool specifico per un confronto → l’AI lo darà, ma senza promuoverlo (coerente con il ruolo).
-Verifica funzionamento	La risposta deve menzionare esplicitamente almeno uno dei cinque fondamentali (es. “COSTAR”, “cervello generale”, “agente AI”, “dati personali”, “vibe coding”). Se l’AI dà consigli senza inquadrarli in questi termini, il prompt non è stato applicato.
-📋 Scheda 3 – Honesty Extractor
-(estrattore di dati obiettivo con ancoraggio, campo vuoto e auto‑audit)
+## Parte 2 – 3 Prompt Specialistici
 
-Specifica	Dettaglio
-A cosa serve	Estrarre dati da documenti (contratti, Excel, email, report, PDF) senza allucinazioni. Forza l’AI a usare solo informazioni esplicite, a lasciare campi vuoti in caso di ambiguità, a etichettare ogni dato come “estratto” o “inferito” e a produrre un audit di affidabilità.
-Tipo di IA	ChatGPT, Claude, Gemini (con supporto a tabelle markdown e gestione di file allegati).
-Lunghezza risposta tipica	Tabella + audit: da 10 righe a centinaia (dipende dal numero di campi richiesti e dalla lunghezza del documento).
-Flusso operativo	1. Copia l’intero prompt (da [RUOLO] a “Non omettere alcun passaggio”).
-2. Allega il documento (o incolla il testo) nella chat.
-3. Specifica quali campi estrarre (es. “estrai nome cliente, data fattura, importo totale, indirizzo”).
-4. L’AI produce una tabella con colonne: (i valori richiesti) + Fonte + Evidenza (se inferito) + Motivo vuoto.
-5. Segue una sezione “Audit” con livelli ALTO/MEDIO/BASSO e spiegazioni.
-Errori comuni	❌ Non specificare i campi da estrarre → l’AI chiederà chiarimenti (funziona comunque).
-❌ Fornire un documento molto lungo con decine di campi → l’AI potrebbe tralasciarne alcuni. Meglio fare richieste multiple (max 10 campi per volta).
-❌ Usare su AI senza capacità di leggere file allegati → bisogna prima estrarre il testo manualmente.
-Verifica funzionamento	La risposta deve contenere almeno un campo vuoto con “Motivo vuoto” compilato oppure un campo “inferito” con “Evidenza” (o entrambi). Se tutta la tabella è composta da “estratto” senza mai un vuoto, probabilmente l’AI ha inventato i dati mancanti.
-✅ Tabella riassuntiva rapida dei tre prompt
-Nome breve	A cosa serve	Tipo IA	Tempo medio risposta	Azione chiave
-DeepReasoner	Ragionamento profondo + autovalutazione + output XML	ChatGPT, Claude, Gemini	15-40 sec	Incollare il prompt prima della domanda
-AI Fundamentals Coach	Insegnare i 5 fondamentali (COSTAR, strumenti, agenti, dati, vibe coding)	Qualsiasi LLM	10-30 sec	Fare una domanda su un fondamentale specifico
-Honesty Extractor	Estrazione dati da documenti senza invenzioni, con campi vuoti e audit	Tutte (meglio con file)	20-60 sec	Allegare documento + specificare i campi
-📎 Note per l’uso combinato
-DeepReasoner + Honesty Extractor: incolla prima DeepReasoner, poi il prompt Honesty Extractor e il documento. L’AI applicherà entrambi i framework (ragionamento approfondito + estrazione onesta).
+### 1. DeepReasoner (Ragionamento approfondito, XML, autovalutazione)
 
-AI Fundamentals Coach può essere usato prima di chiedere aiuto su un task specifico: chiedi “Quale fondamentale devo applicare per creare un report di vendite?” e poi passa a Honesty Extractor.
+| Specifica | Dettaglio |
+| --- | --- |
+| **A cosa serve** | Costringe l’AI a ragionare a lungo, autovalutarsi internamente con criteri (KPI) e fornire risposte strutturate in XML (analisi, dettagli, raccomandazioni). Ideale per problemi complessi, analisi strategiche, coding, pianificazione. |
+| **Tipo di IA** | ChatGPT (GPT‑4o, GPT‑5), Claude, Gemini, qualsiasi LLM con buona capacità di seguire istruzioni articolate. |
+| **Lunghezza risposta tipica** | 3‑5 paragrafi (modificabile agendo sul tag `<VERBOSITA>`). In formato XML, da 300 a 800 parole circa. |
+| **Flusso operativo** | 1. Copia l’intero prompt (dal tag `[RUOLO]` fino a “Ora rispondi alla richiesta dell’utente”).<br>2. Incollalo all’inizio della chat.<br>3. Scrivi la tua domanda o task subito dopo (anche nello stesso messaggio).<br>4. L’AI esegue internamente: power phrase → definisce KPI → valuta bozza → perfeziona → produce output con tag `<analisi>`, `<dettagli>`, `<raccomandazioni>`.<br>5. Per modificare la lunghezza, cambia il testo in `<VERBOSITA>` (es. “risposta molto breve, 100 parole”). |
+| **Errori comuni** | ❌ Dimenticare di incollare il prompt prima della domanda → l’AI risponde in modo standard.<br>❌ Chiedere compiti multipli in una volta → l’AI li gestisce ma la struttura XML può diventare confusa.<br>❌ Usare su modelli molto vecchi (es. GPT‑3.5) → l’autovalutazione interna potrebbe essere inefficace. |
+| **Verifica funzionamento** | La risposta deve contenere almeno due dei tre tag XML (`<analisi>`, `<dettagli>`, `<raccomandazioni>`). Se l’output è un normale blocco di testo senza marcatori, il prompt non è stato applicato. |
 
-Tutti e tre i prompt sono auto-contenuti e non richiedono modifiche se non la sostituzione del task o dei campi di estrazione.
+### 2. AI Fundamentals Coach (I 5 Fondamentali dell’IA nel 2026)
+
+| Specifica | Dettaglio |
+| --- | --- |
+| **A cosa serve** | Insegna all’utente i cinque fondamentali per usare l’IA in modo efficace: sviluppo prompt con COSTAR, scelta dei 4 tipi di strumenti (cervello, ricerca, specialista, automazione), agenti AI, integrazione di dati personali, vibe coding. Non promuove tool specifici ma principi generali. |
+| **Tipo di IA** | Qualsiasi LLM testuale (ChatGPT, Claude, Gemini, Copilot). Ideale per chat di formazione o consulenza. |
+| **Lunghezza risposta tipica** | Variabile (da 200 a 1500 parole) a seconda della domanda. Di solito strutturata in elenchi o sezioni. |
+| **Flusso operativo** | 1. Incolla l’intero prompt (da `[RUOLO]` a “Ora attendi la richiesta dell’utente”).<br>2. Scrivi una domanda su uno dei fondamentali (es. “Aiutami a scrivere un prompt per un reel” oppure “Quale strumento usare per automatizzare?”).<br>3. L’AI risponde applicando la regola corrispondente (COSTAR, classificazione strumenti, spiegazione agenti, dati, vibe coding).<br>4. Se la domanda è generica, l’AI chiederà dettagli (es. “Qual è il tuo obiettivo misurabile?”). |
+| **Errori comuni** | ❌ Chiedere “dammi tutti i fondamentali in una volta” → l’AI li elenca ma in modo meno approfondito.<br>❌ Fornire un compito troppo vago (“parlami dell’IA”) → l’AI risponderà in modo generale, meglio essere specifici.<br>❌ Chiedere un nome di tool specifico per un confronto → l’AI lo darà, ma senza promuoverlo (coerente con il ruolo). |
+| **Verifica funzionamento** | La risposta deve menzionare esplicitamente almeno uno dei cinque fondamentali (es. “COSTAR”, “cervello generale”, “agente AI”, “dati personali”, “vibe coding”). Se l’AI dà consigli senza inquadrarli in questi termini, il prompt non è stato applicato. |
+
+### 3. Honesty Extractor (Estrazione dati obiettiva senza allucinazioni)
+
+| Specifica | Dettaglio |
+| --- | --- |
+| **A cosa serve** | Estrarre dati da documenti (contratti, Excel, email, report, PDF) senza allucinazioni. Forza l’AI a usare solo informazioni esplicite, a lasciare campi vuoti in caso di ambiguità, a etichettare ogni dato come “estratto” o “inferito” e a produrre un audit di affidabilità. |
+| **Tipo di IA** | ChatGPT, Claude, Gemini (con supporto a tabelle markdown e gestione di file allegati). |
+| **Lunghezza risposta tipica** | Tabella + audit: da 10 righe a centinaia (dipende dal numero di campi richiesti e dalla lunghezza del documento). |
+| **Flusso operativo** | 1. Copia l’intero prompt (da `[RUOLO]` a “Non omettere alcun passaggio”).<br>2. Allega il documento (o incolla il testo) nella chat.<br>3. Specifica quali campi estrarre (es. “estrai nome cliente, data fattura, importo totale, indirizzo”).<br>4. L’AI produce una tabella con colonne: (i valori richiesti) + Fonte + Evidenza (se inferito) + Motivo vuoto.<br>5. Segue una sezione “Audit” con livelli ALTO/MEDIO/BASSO e spiegazioni. |
+| **Errori comuni** | ❌ Non specificare i campi da estrarre → l’AI chiederà chiarimenti (funziona comunque).<br>❌ Fornire un documento molto lungo con decine di campi → l’AI potrebbe tralasciarne alcuni. Meglio fare richieste multiple (max 10 campi per volta).<br>❌ Usare su AI senza capacità di leggere file allegati → bisogna prima estrarre il testo manualmente. |
+| **Verifica funzionamento** | La risposta deve contenere almeno un campo vuoto con “Motivo vuoto” compilato oppure un campo “inferito” con “Evidenza” (o entrambi). Se tutta la tabella è composta da “estratto” senza mai un vuoto, probabilmente l’AI ha inventato i dati mancanti. |
+
+---
+
+### ✅ Tabella Riassuntiva – Parte 2
+
+| Nome Prompt | A cosa serve | Tipo IA | Tempo medio risposta | Azione chiave |
+| --- | --- | --- | --- | --- |
+| DeepReasoner | Ragionamento profondo + autovalutazione + output XML | ChatGPT, Claude, Gemini | 15‑40 sec | Incollare il prompt prima della domanda |
+| AI Fundamentals Coach | Insegnare i 5 fondamentali (COSTAR, strumenti, agenti, dati, vibe coding) | Qualsiasi LLM | 10‑30 sec | Fare una domanda su un fondamentale specifico |
+| Honesty Extractor | Estrazione dati da documenti senza invenzioni, con campi vuoti e audit | Tutte (meglio con file) | 20‑60 sec | Allegare documento + specificare i campi |
+
+---
+
+## 📎 Note per l’uso combinato
+
+- **DeepReasoner + Honesty Extractor**: incolla prima DeepReasoner, poi il prompt Honesty Extractor e il documento. L’AI applicherà entrambi i framework (ragionamento approfondito + estrazione onesta).
+- **AI Fundamentals Coach** può essere usato prima di chiedere aiuto su un task specifico: chiedi “Quale fondamentale devo applicare per creare un report di vendite?” e poi passa a Honesty Extractor.
+- Tutti e nove i prompt sono auto‑contenuti e non richiedono modifiche se non la sostituzione del task o dei campi di estrazione.
