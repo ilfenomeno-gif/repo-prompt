@@ -139,3 +139,24 @@ Ecco il testo riorganizzato e pulito, con una struttura uniforme, tabelle ben fo
 - **DeepReasoner + Honesty Extractor**: incolla prima DeepReasoner, poi il prompt Honesty Extractor e il documento. L’AI applicherà entrambi i framework (ragionamento approfondito + estrazione onesta).
 - **AI Fundamentals Coach** può essere usato prima di chiedere aiuto su un task specifico: chiedi “Quale fondamentale devo applicare per creare un report di vendite?” e poi passa a Honesty Extractor.
 - Tutti e nove i prompt sono auto‑contenuti e non richiedono modifiche se non la sostituzione del task o dei campi di estrazione.
+
+
+📋 Ingegnere AI · Modalità Produzione
+Specifica	Dettaglio
+A cosa serve	Trasforma l’AI in un ingegnere del software che risponde in modo obiettivo, deterministico e quantitativo. Obbliga a strutturare ogni risposta in: Analisi, Soluzione (con codice pronto produzione, pattern, complessità), Valutazione pro/contro tabellare, e opzionalmente Alternative. Vieta opinioni, metafore e testo vago.
+Tipo di IA	ChatGPT, Claude, Gemini, Copilot (modelli con buona capacità di seguire strutture articolate). Ideale per domande di coding, architettura, ottimizzazione.
+Lunghezza risposta tipica	Variabile: da 300 a 1500 parole, dipende dalla complessità del problema e dalla lunghezza del codice.
+Flusso operativo	1. Copia l’intero prompt (dalla sezione # Ingegnere AI – Prompt di sistema fino alla fine dell’esempio).
+2. Incollalo all’inizio della chat (funge da system prompt o primo messaggio).
+3. Scrivi la tua domanda tecnica specificando linguaggio di programmazione, contesto e vincoli (es. “In Python, leggi file CSV da 10 GB senza esaurire RAM”).
+4. L’AI risponderà esattamente con le sezioni richieste: 📐 Analisi, ⚙️ Soluzione ingegneristica (con codice, pattern, complessità), 📊 Valutazione oggettiva (tabella Pro/Contro), e 🔁 Alternative (solo se necessario o esplicitamente richiesto).
+5. Se la domanda è ambigua o manca il linguaggio, l’AI chiederà chiarimenti solo con un elenco puntato, senza fornire soluzioni parziali.
+Errori comuni	❌ Dimenticare di specificare il linguaggio di programmazione → l’AI chiederà chiarimenti (comportamento corretto, ma rallenta).
+❌ Fare domande generiche (“migliora questo codice”) senza metriche o obiettivi → l’AI rispetta lo stesso la struttura, ma potrebbe chiedere metriche mancanti.
+❌ Chiedere opinioni (“secondo te è meglio X o Y?”) → l’AI rifiuterà e fornirà una tabella comparativa quantitativa (se possibile) oppure chiederà criteri oggettivi.
+Verifica funzionamento	La risposta deve contenere obbligatoriamente le intestazioni ## 📐 Analisi (obiettiva), ## ⚙️ Soluzione ingegneristica, ## 📊 Valutazione oggettiva (pro/contro quantitativi). Inoltre la tabella Pro/Contro deve includere metriche o limitazioni misurabili (non aggettivi vaghi). Se manca anche solo una di queste sezioni, il prompt non è stato applicato correttamente.
+✅ Riga riassuntiva (da aggiungere alla tabella di sintesi)
+Nome Prompt	Tipo IA	Tempo medio risposta	Azione chiave
+Ingegnere AI · Modalità Produzione	ChatGPT, Claude, Gemini, Copilot	15‑50 sec (dipende dal codice generato)	Specificare linguaggio e vincoli quantitativi
+📌 Nota d’uso
+Questo prompt è auto‑contenuto e sostituisce completamente la personalità conversazionale dell’AI. Per risultati ottimali, posizionalo all’inizio della chat come primo messaggio. Se usi API, impostalo come system prompt. Non richiede modifiche al testo tranne che per l’esempio (puoi rimuoverlo o sostituirlo con un esempio più pertinente al tuo dominio).
