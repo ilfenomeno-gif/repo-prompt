@@ -92,4 +92,61 @@
 | Problem Solver 4 Fasi | Tutte | 20-40 sec per fase | Dare consenso a ogni fase |
 | AI Prompt Enhancer | Tutte | 15-40 sec | Scrivere il compito dopo il prompt |
 | Action Framework | Tutte | 20-50 sec | Fornire obiettivo, ruolo, contesto, azione, formato |
+📋 Scheda 1 – DeepReasoner
+(ragionamento approfondito, struttura XML, autovalutazione con KPI interni)
 
+Specifica	Dettaglio
+A cosa serve	Costringe l’AI a ragionare a lungo, autovalutarsi internamente con criteri (KPI) e fornire risposte strutturate in XML (analisi, dettagli, raccomandazioni). Ideale per problemi complessi, analisi strategiche, coding, pianificazione.
+Tipo di IA	ChatGPT (GPT-4o, GPT-5), Claude, Gemini, qualsiasi LLM con buona capacità di seguire istruzioni articolate.
+Lunghezza risposta tipica	3-5 paragrafi (modificabile agendo sul tag <VERBOSITA>). In formato XML, da 300 a 800 parole circa.
+Flusso operativo	1. Copia l’intero prompt (dal tag [RUOLO] fino a “Ora rispondi alla richiesta dell’utente”).
+2. Incollalo all’inizio della chat.
+3. Scrivi la tua domanda o task subito dopo (anche nello stesso messaggio).
+4. L’AI esegue internamente: power phrase → definisce KPI → valuta bozza → perfeziona → produce output con tag <analisi>, <dettagli>, <raccomandazioni>.
+5. Se vuoi modificare la lunghezza, cambia il testo in <VERBOSITA> (es. “risposta molto breve, 100 parole”).
+Errori comuni	❌ Dimenticare di incollare il prompt prima della domanda → l’AI risponde in modo standard.
+❌ Chiedere compiti multipli in una volta → l’AI li gestisce ma la struttura XML può diventare confusa.
+❌ Usare su modelli molto vecchi (es. GPT-3.5) → l’autovalutazione interna potrebbe essere inefficace.
+Verifica funzionamento	La risposta deve contenere almeno due dei tre tag XML (<analisi>, <dettagli>, <raccomandazioni>). Se l’output è un normale blocco di testo senza marcatori, il prompt non è stato applicato.
+📋 Scheda 2 – AI Fundamentals Coach
+(padroneggiare i 5 fondamentali dell’IA nel 2026)
+
+Specifica	Dettaglio
+A cosa serve	Insegna all’utente i cinque fondamentali per usare l’IA in modo efficace: sviluppo prompt con COSTAR, scelta dei 4 tipi di strumenti (cervello, ricerca, specialista, automazione), agenti AI, integrazione di dati personali, vibe coding. Non promuove tool specifici ma principi generali.
+Tipo di IA	Qualsiasi LLM testuale (ChatGPT, Claude, Gemini, Copilot). Ideale per chat di formazione o consulenza.
+Lunghezza risposta tipica	Variabile (da 200 a 1500 parole) a seconda della domanda dell’utente. Di solito strutturata in elenchi o sezioni.
+Flusso operativo	1. Incolla l’intero prompt (da [RUOLO] a “Ora attendi la richiesta dell’utente”).
+2. Scrivi una domanda su uno dei fondamentali (es. “Aiutami a scrivere un prompt per un reel” oppure “Quale strumento usare per automatizzare?”).
+3. L’AI risponde applicando la regola corrispondente (COSTAR, classificazione strumenti, spiegazione agenti, dati, vibe coding).
+4. Se la domanda è generica, l’AI chiederà dettagli (es. “Qual è il tuo obiettivo misurabile?”).
+Errori comuni	❌ Chiedere “dammi tutti i fondamentali in una volta” → l’AI li elenca ma in modo meno approfondito.
+❌ Fornire un compito troppo vago (“parlami dell’IA”) → l’AI risponderà in modo generale, meglio essere specifici.
+❌ Chiedere un nome di tool specifico per un confronto → l’AI lo darà, ma senza promuoverlo (coerente con il ruolo).
+Verifica funzionamento	La risposta deve menzionare esplicitamente almeno uno dei cinque fondamentali (es. “COSTAR”, “cervello generale”, “agente AI”, “dati personali”, “vibe coding”). Se l’AI dà consigli senza inquadrarli in questi termini, il prompt non è stato applicato.
+📋 Scheda 3 – Honesty Extractor
+(estrattore di dati obiettivo con ancoraggio, campo vuoto e auto‑audit)
+
+Specifica	Dettaglio
+A cosa serve	Estrarre dati da documenti (contratti, Excel, email, report, PDF) senza allucinazioni. Forza l’AI a usare solo informazioni esplicite, a lasciare campi vuoti in caso di ambiguità, a etichettare ogni dato come “estratto” o “inferito” e a produrre un audit di affidabilità.
+Tipo di IA	ChatGPT, Claude, Gemini (con supporto a tabelle markdown e gestione di file allegati).
+Lunghezza risposta tipica	Tabella + audit: da 10 righe a centinaia (dipende dal numero di campi richiesti e dalla lunghezza del documento).
+Flusso operativo	1. Copia l’intero prompt (da [RUOLO] a “Non omettere alcun passaggio”).
+2. Allega il documento (o incolla il testo) nella chat.
+3. Specifica quali campi estrarre (es. “estrai nome cliente, data fattura, importo totale, indirizzo”).
+4. L’AI produce una tabella con colonne: (i valori richiesti) + Fonte + Evidenza (se inferito) + Motivo vuoto.
+5. Segue una sezione “Audit” con livelli ALTO/MEDIO/BASSO e spiegazioni.
+Errori comuni	❌ Non specificare i campi da estrarre → l’AI chiederà chiarimenti (funziona comunque).
+❌ Fornire un documento molto lungo con decine di campi → l’AI potrebbe tralasciarne alcuni. Meglio fare richieste multiple (max 10 campi per volta).
+❌ Usare su AI senza capacità di leggere file allegati → bisogna prima estrarre il testo manualmente.
+Verifica funzionamento	La risposta deve contenere almeno un campo vuoto con “Motivo vuoto” compilato oppure un campo “inferito” con “Evidenza” (o entrambi). Se tutta la tabella è composta da “estratto” senza mai un vuoto, probabilmente l’AI ha inventato i dati mancanti.
+✅ Tabella riassuntiva rapida dei tre prompt
+Nome breve	A cosa serve	Tipo IA	Tempo medio risposta	Azione chiave
+DeepReasoner	Ragionamento profondo + autovalutazione + output XML	ChatGPT, Claude, Gemini	15-40 sec	Incollare il prompt prima della domanda
+AI Fundamentals Coach	Insegnare i 5 fondamentali (COSTAR, strumenti, agenti, dati, vibe coding)	Qualsiasi LLM	10-30 sec	Fare una domanda su un fondamentale specifico
+Honesty Extractor	Estrazione dati da documenti senza invenzioni, con campi vuoti e audit	Tutte (meglio con file)	20-60 sec	Allegare documento + specificare i campi
+📎 Note per l’uso combinato
+DeepReasoner + Honesty Extractor: incolla prima DeepReasoner, poi il prompt Honesty Extractor e il documento. L’AI applicherà entrambi i framework (ragionamento approfondito + estrazione onesta).
+
+AI Fundamentals Coach può essere usato prima di chiedere aiuto su un task specifico: chiedi “Quale fondamentale devo applicare per creare un report di vendite?” e poi passa a Honesty Extractor.
+
+Tutti e tre i prompt sono auto-contenuti e non richiedono modifiche se non la sostituzione del task o dei campi di estrazione.
