@@ -1,4 +1,4 @@
-📚 SCHEDA D’USO COMPLETA – TUTTI I PROMPT STRATEGICI PER AI
+ 📚 SCHEDA D’USO COMPLETA – TUTTI I PROMPT STRATEGICI PER AI
 Indice rapido
 Zona	Prompt
 Generali	1. Framework Prompt Universale
